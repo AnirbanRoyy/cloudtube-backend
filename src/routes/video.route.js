@@ -16,6 +16,7 @@ import {
     getVideoComments,
     updateComment,
 } from "../controllers/comment.controller.js";
+import { addReply, getReplies } from "../controllers/replies.controller.js";
 
 const router = Router();
 
@@ -51,5 +52,14 @@ router.route("/:videoId/comments").get(getVideoComments);
 router.route("/:videoId/comments/:commentId").patch(verifyJWT, updateComment);
 router.route("/:videoId/comments/:commentId").delete(verifyJWT, deleteComment);
 
+// Replies CRUD opeartion routes
+router.route("/:videoId/comments/:commentId/replies").post(verifyJWT, addReply);
+router.route("/:videoId/comments/:commentId/replies").get(getReplies);
+router
+    .route("/:videoId/comments/:commentId/replies/:replyId")
+    .patch(verifyJWT, updateComment);
+router
+    .route("/:videoId/comments/:commentId/replies/:replyId")
+    .delete(verifyJWT, deleteComment);
 
 export default router;
