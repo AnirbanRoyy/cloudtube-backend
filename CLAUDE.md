@@ -1,5 +1,7 @@
 # YouTube Backend (MERN) — CLAUDE.md
 
+@../plan/CONTEXT.md
+
 CRUD YouTube-clone backend (Node + Express + MongoDB/Mongoose), loosely based on the Chai aur Code course. A frontend (Vite + React + TailwindCSS + ShadCN) will be built next, and this backend will be upgraded substantially. Repo: `github.com/AnirbanRoyy/YouTube-BackEnd`.
 
 ## Commands
